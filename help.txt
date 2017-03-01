@@ -1,0 +1,2 @@
+
+Working with SybaseV16 in changeLog generates the columns of the type tables INT, SMALLINT, TINYINT with the size of the row, but at the moment of applying this changeLog in another new DB it generates the error that sybase does not accept the size of the columns , A class has been added in liquibase.diff.output.changelog.TryFile.java which obtains the file and changes the INT (9) data types to INT, this class is used in the class liquibase.diff.output.changelog. DiffToChangeLog.java.g
