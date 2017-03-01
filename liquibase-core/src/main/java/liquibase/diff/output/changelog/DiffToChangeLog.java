@@ -87,6 +87,11 @@ public class DiffToChangeLog {
             FileOutputStream stream = new FileOutputStream(file);
             print(new PrintStream(stream, true, LiquibaseConfiguration.getInstance().getConfiguration(GlobalConfiguration.class).getOutputEncoding()), changeLogSerializer);
             stream.close();
+            /***MY_CODE****/
+			TryFile tryFile = new TryFile(file);
+			tryFile.dataOfFile();
+			tryFile.modifu();
+			 /*******/
         } else {
             LogFactory.getLogger().info(file + " exists, appending");
             ByteArrayOutputStream out = new ByteArrayOutputStream();
